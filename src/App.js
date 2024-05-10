@@ -28,7 +28,7 @@ function getLast7DaysShortNamesAndDates() {
   for (let i = 6; i >= 0; i--) {
       const pastDate = new Date(today);
       pastDate.setDate(today.getDate() - i);
-      const shortDayName = new Intl.DateTimeFormat('en-US', optionsShort).format(pastDate);
+      const shortDayName = new Intl.DateTimeFormat('en-US', optionsShort).format(pastDate).slice(0, 2);
       const dateString = pastDate.toISOString().split("T")[0];
       last7Days.push({ shortDayName, dateString });
   }
