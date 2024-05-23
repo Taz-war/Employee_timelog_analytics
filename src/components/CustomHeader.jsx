@@ -89,19 +89,8 @@ const CustomHeader = ({ individual_data }) => {
       totalFixedPriceHours: day.totalFixedPriceHours.toFixed(2),
     });
   });
-  console.log({ last6Days });
-  const latestDayTotalHour =
-    parseFloat(dailyTotals[0].totalBillableHours) +
-    parseFloat(dailyTotals[0].totalNonBillableHours) +
-    parseFloat(dailyTotals[0].totalFixedPriceHours);
-  const YesterdayTotalHour =
-    parseFloat(dailyTotals[1].totalBillableHours) +
-    parseFloat(dailyTotals[1].totalNonBillableHours) +
-    parseFloat(dailyTotals[1].totalFixedPriceHours);
-  const DayBeforeYesterDay =
-    parseFloat(dailyTotals[2].totalBillableHours) +
-    parseFloat(dailyTotals[2].totalNonBillableHours) +
-    parseFloat(dailyTotals[2].totalFixedPriceHours);
+  console.log({ dailyTotals });
+
   return (
     <Box>
       <Box>

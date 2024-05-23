@@ -7,7 +7,6 @@ import Example from "./components/Example";
 import { useState, useEffect } from "react";
 import axios from "axios";
 // import employeeData from "../src/data/EmployeeData.json";
-const ZOHO = window.ZOHO;
 
 function App() {
   const [initialized, setInitialized] = useState(false); // initialize the widget
@@ -55,46 +54,6 @@ function App() {
         console.error("There was an error fetching the data!", error);
       });
 
-    // ZOHO.embeddedApp.on("PageLoad", async function (data) {
-    //   var func_name = "company_overview_current_month";
-    //   var req_data = {
-    //     arguments: JSON.stringify({}),
-    //   };
-    //   const timeSheetsData = await ZOHO.CRM.FUNCTIONS.execute(
-    //     func_name,
-    //     req_data
-    //   );
-    //   timeSheetsData.map((item) =>
-    //     temp.push({
-    //       Assignee: item.Assignee,
-    //       Billable: item.Billable,
-    //       Start_End: item.Start_Time,
-    //       End_Time: item.End_Time,
-    //       Hours_Logged: item.Hours_Logged1,
-    //     })
-    //   );
-
-    //   // Process the data
-    //   const processedData = groupAndCalculateHours(temp);
-
-    //   const processedArray1 = Object.entries(processedData).map(
-    //     ([name, data]) => ({
-    //       name,
-    //       ...data,
-    //     })
-    //   );
-
-    //   setProcessedArray(processedArray1);
-
-    //   set_individual_data(temp);
-    //   setEmployeeData(timeSheetsData);
-    //   // console.log({ timeSheetsData });
-    //   setInitialized(true);
-    //   ZOHO.CRM.UI.Resize({ height: "500", width: "1200" });
-    //   setLoader(false);
-    // });
-
-    // ZOHO.embeddedApp.init();
   }, []);
 
   // Function to get the last 7 days with short day names
