@@ -15,7 +15,7 @@ const CustomHeader = ({ individual_data }) => {
     const today = new Date();
     let count = 0;
 
-    while (dates.length < 6) {
+    while (dates.length < n) {
       const date = new Date(today);
       date.setDate(today.getDate() - count);
       if (date.getDay() !== 0) {
@@ -36,7 +36,7 @@ const CustomHeader = ({ individual_data }) => {
   }
 
   // Generate the last 3 days
-  const last6Days = getLastNDays(6);
+  const last6Days = getLastNDays(4);
 
   // Initialize a map to store totals for each day
   const totalsMap = new Map(
@@ -94,9 +94,10 @@ const CustomHeader = ({ individual_data }) => {
   return (
     <Box>
       <Box>
+      <Typography variant="h5" fontWeight={'bold'} mt={1} mb={0} textAlign={"left"}>Last 4 days Overview</Typography>
         <Grid container columns={12} spacing={2} p={2} px={0}>
           {dailyTotals.map((item, index) => (
-            <Grid item xs={4} sm={4} md={4} lg={2}>
+            <Grid item xs={4} sm={4} md={4} lg={3}>
               <Box bgcolor={"#F6FAFD"} p={2} borderRadius={3}>
                 <Grid container columns={12}>
                   <Grid item xs={12}>
@@ -126,7 +127,7 @@ const CustomHeader = ({ individual_data }) => {
                             color={"#626465"}
                             ml={1}
                           >
-                            {dailyTotals[index].DateWiseHourLogged}
+                            {dailyTotals[index].DateWiseHourLogged} hr
                           </Typography>
                         </Box>
                       </Grid>
@@ -149,7 +150,7 @@ const CustomHeader = ({ individual_data }) => {
                             fontSize={"large"}
                             fontWeight={600}
                           >
-                            {dailyTotals[index].totalBillableHours}
+                            {dailyTotals[index].totalBillableHours} hr
                           </Typography>
                         </Box>
                       </Grid>
@@ -168,7 +169,7 @@ const CustomHeader = ({ individual_data }) => {
                             fontSize={"large"}
                             fontWeight={600}
                           >
-                            {dailyTotals[index].totalNonBillableHours}
+                            {dailyTotals[index].totalNonBillableHours} hr
                           </Typography>
                         </Box>
                       </Grid>
@@ -187,7 +188,7 @@ const CustomHeader = ({ individual_data }) => {
                             fontSize={"large"}
                             fontWeight={600}
                           >
-                            {dailyTotals[index].totalFixedPriceHours}
+                            {dailyTotals[index].totalFixedPriceHours} hr
                           </Typography>
                         </Box>
                       </Grid>

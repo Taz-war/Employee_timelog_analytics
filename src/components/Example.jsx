@@ -145,6 +145,7 @@ const Example = ({ processedArray, loader }) => {
         </>
       ) : (
         <Box>
+          <Typography variant="h5" fontWeight={'bold'} m={2} textAlign={"left"}>Last 7 days Overview</Typography>
           <Box display={"flex"} justifyContent={'space-evenly'} mb={2}>
             <Box display={"flex"} width={"30%"} textAlign={'center'}>
               <Box height={"20px"} width={"40px"} bgcolor={"#2A5D78"}></Box>
@@ -161,7 +162,7 @@ const Example = ({ processedArray, loader }) => {
           </Box>
           <Grid container columns={12} spacing={2}>
             {sortedData.map((logData, index) => (
-              <Grid key={index} item xs={4} sm={4} md={3} lg={2}>
+              <Grid key={index} item xs={4} sm={4} md={3} lg={3}>
                 <Card sx={{ width: "100%", height: 350, bgcolor: "#fafafa" }}>
                   <CardContent>
                     <Grid container spacing={2} columns={12}>
