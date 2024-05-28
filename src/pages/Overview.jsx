@@ -1,6 +1,7 @@
 import { Box, Grid, Typography } from '@mui/material'
 import React from 'react'
 import TableComponent from '../components/atoms/TableComponent'
+import Tabs from '../components/atoms/Tabs';
 const headers1 = [
   { label: 'Bill type', key: 'billType' },
   { label: 'Current Month', key: 'currentMonth', align: 'right' },
@@ -80,6 +81,10 @@ const Overview = () => {
             </Grid>
           </Grid>
         </Grid>
+      </Box>
+
+      <Box p={2} bgcolor={'white'} mt={2} borderRadius={'10px'}>
+        <Tabs />
       </Box>
     </Box>
   )
