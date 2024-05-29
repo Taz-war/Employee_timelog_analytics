@@ -101,7 +101,7 @@ export default function Company_overview() {
             )}
           </IconButton>
         </DrawerHeader>
-        <Divider />
+
         <List sx={{ p: 0.5 }}>
           {[
             "Dashboard",

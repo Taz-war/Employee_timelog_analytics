@@ -40,19 +40,19 @@ const footer2 = [
 const Overview = () => {
   return (
     <Box bgcolor={"#F5F5F5"} p={2}>
-      <Typography variant='h5' textAlign={'left'}>Company Overview</Typography>
+      <Typography variant='h5' textAlign={'left'} m={1}>Company Overview</Typography>
       <Box p={2} bgcolor={'white'} borderRadius={'10px'}>
         <Grid container columns={3} spacing={2}>
           <Grid item xs={1} >
-            <Typography fontWeight={'bold'} fontSize={'20px'}>Bill Type</Typography>
+            <Typography fontWeight={'bold'} fontSize={'20px'} mb={1}>Bill Type</Typography>
             <TableComponent headers={headers1} rows={rows1} footer={footer1} />
           </Grid>
           <Grid item xs={1} >
-            <Typography fontWeight={'bold'} fontSize={'20px'}>Hour Type</Typography>
+            <Typography fontWeight={'bold'} fontSize={'20px'} mb={1}>Hour Type</Typography>
             <TableComponent headers={headers2} rows={rows2} footer={footer1} />
           </Grid>
           <Grid item xs={1}>
-            <Typography fontWeight={'bold'} fontSize={'20px'}>Company ERP</Typography>
+            <Typography fontWeight={'bold'} fontSize={'20px'} mb={1}>Company ERP</Typography>
             <Grid container columns={12} spacing={2}>
               <Grid item xs={6}  p={1}>
                 <Box bgcolor={"#1976D214"} borderRadius={'10px'} p={1.5} pl={4}>

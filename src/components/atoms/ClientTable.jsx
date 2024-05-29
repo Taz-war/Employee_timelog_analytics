@@ -76,7 +76,7 @@ const TaskStatusChip = ({ status }) => {
 export default function ClientTable() {
     return (
         <>
-            <Typography variant="h6" sx={{ m:2 }}>
+            <Typography variant="h6" sx={{ m:2,ml:1 }}>
                 WOLQ Email
             </Typography>
             <TableContainer  sx={{ mt: 2 }}>
